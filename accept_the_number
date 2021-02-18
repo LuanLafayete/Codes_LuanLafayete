@@ -1,0 +1,65 @@
+using System;
+using System.Globalization;
+
+namespace Matemática
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int a, b, c, d, soma1, soma2;
+
+            Console.WriteLine("==============================================");
+            Console.WriteLine("               Accept the numbers             ");
+            Console.WriteLine("==============================================");
+
+            Console.Write("Digite o primeiro numero: ");
+            a = int.Parse(Console.ReadLine());
+
+            Console.Write("Digite o segundo numero: ");
+            b = int.Parse(Console.ReadLine());
+
+            Console.Write("Digite o terceiro numero: ");
+            c = int.Parse(Console.ReadLine());
+
+            Console.Write("Digite o quarto numero: ");
+            d = int.Parse(Console.ReadLine());
+
+            //I know I can put all this if else in the same line, but I used like this to pratice.
+            
+            soma1 = c + d;
+            soma2 = a + b;
+
+            if (b > c && d > a)
+            {
+                if (soma1 > soma2)
+                {
+                    if (c > 0 && d > 0)
+                    {
+                        if (a % 2 == 0)
+                        {
+                            Console.WriteLine("Valores aceito");
+                        }
+                        else
+                        {
+                            Console.WriteLine("Valores não aceito");
+                        }
+                    }
+                    else
+                    {
+                        Console.WriteLine("Valores não aceito");
+                    }
+                }
+                else
+                {
+                    Console.WriteLine("Valores não aceitos");
+                }
+            }
+            else
+            {
+                Console.WriteLine("Valores não aceitos");
+            }
+
+        }
+    }
+}
