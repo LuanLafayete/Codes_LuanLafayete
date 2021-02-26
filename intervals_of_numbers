@@ -1,0 +1,52 @@
+using System;
+using System.Globalization;
+
+namespace Matemática
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            float nun1;
+
+            Console.WriteLine("=========================================");
+            Console.WriteLine("         QUAL INTERVALO PERTENCE         ");
+            Console.WriteLine("=========================================");
+
+            Console.Write("Digite um valor para saber a qual intervalo pertence: ");
+            nun1 = float.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+
+            if (nun1 >= 0.00 && nun1 <= 25.00)
+            {
+                Console.WriteLine("Intervalo (0,25)");
+            }
+            else
+            {
+                if (nun1 >= 25.00 && nun1 <= 50.00)
+                {
+                    Console.WriteLine("Intervalo (25,50)");
+                }
+                else
+                {
+                    if (nun1 >= 50.00 && nun1 <= 75.00)
+                    {
+                        Console.WriteLine("Intervalo (50,75)");
+                    }
+                    else
+                    {
+                        if (nun1 >= 75.00 && nun1 <= 100.00)
+                        {
+                            Console.WriteLine("Intervalo (75,100)");
+                        }
+                        else
+                        {
+                            Console.WriteLine("Fora de intervalo");
+                        }
+                    }
+                }
+            }
+
+
+        }
+    }
+}
